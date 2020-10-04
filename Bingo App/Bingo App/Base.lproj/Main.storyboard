@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bingo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-JG-5g2">
+                                <rect key="frame" x="34" y="412" width="346" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bz6-JG-5g2" secondAttribute="height" multiplier="173:36" id="9xS-vu-rkn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Bingo Generator"/>
+                                <connections>
+                                    <action selector="generatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRg-BG-9iE"/>
+                                    <segue destination="IlG-bY-1UO" kind="presentation" modalPresentationStyle="automatic" id="YKs-6C-8iY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElJ-n7-oWg">
+                                <rect key="frame" x="89" y="492" width="236" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ElJ-n7-oWg" secondAttribute="height" multiplier="59:18" id="FDH-ps-70p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Bingo Card"/>
+                                <connections>
+                                    <action selector="cardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDf-HE-TJx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ElJ-n7-oWg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5n9-Sl-eM9"/>
+                            <constraint firstItem="bz6-JG-5g2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UY7-nQ-Cue"/>
+                            <constraint firstItem="bz6-JG-5g2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V7K-BY-8qX"/>
+                            <constraint firstItem="ElJ-n7-oWg" firstAttribute="top" secondItem="bz6-JG-5g2" secondAttribute="bottom" constant="8" id="YIx-bR-Hz0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="80"/>
+        </scene>
+        <!--Generator View Controller-->
+        <scene sceneID="qif-Nl-X8v">
+            <objects>
+                <viewController id="IlG-bY-1UO" customClass="GeneratorViewController" customModule="Bingo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="syI-Lx-LpU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS3-Ln-LVh">
+                                <rect key="frame" x="142.5" y="181" width="129" height="180"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vez-5f-Ldw">
+                                <rect key="frame" x="166" y="411" width="82" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="callPressed:" destination="IlG-bY-1UO" eventType="touchUpInside" id="TPz-FW-Tnt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOL-hN-VFQ">
+                                <rect key="frame" x="12" y="491" width="390" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Show Bingo Board"/>
+                                <connections>
+                                    <action selector="showBoardPressed:" destination="IlG-bY-1UO" eventType="touchUpInside" id="j7K-gW-tjj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r14-IK-eCz">
+                                <rect key="frame" x="11.5" y="571" width="391" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Reset Bingo Board"/>
+                                <connections>
+                                    <action selector="resetBoardPressed:" destination="IlG-bY-1UO" eventType="touchUpInside" id="ORu-MX-qRX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t5-45-ahR">
+                                <rect key="frame" x="174.5" y="702" width="65" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back" destination="IlG-bY-1UO" eventType="touchUpInside" id="B2c-a7-Ua5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gtW-ch-MyZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vez-5f-Ldw" firstAttribute="centerX" secondItem="syI-Lx-LpU" secondAttribute="centerX" id="1s0-cz-NLO"/>
+                            <constraint firstItem="MS3-Ln-LVh" firstAttribute="top" secondItem="gtW-ch-MyZ" secondAttribute="top" constant="181" id="9bY-sm-t06"/>
+                            <constraint firstItem="r14-IK-eCz" firstAttribute="top" secondItem="sOL-hN-VFQ" secondAttribute="bottom" constant="8" id="CNS-dJ-ZBc"/>
+                            <constraint firstItem="r14-IK-eCz" firstAttribute="centerX" secondItem="syI-Lx-LpU" secondAttribute="centerX" id="Fjv-wg-YKD"/>
+                            <constraint firstItem="Vez-5f-Ldw" firstAttribute="top" secondItem="MS3-Ln-LVh" secondAttribute="bottom" constant="50" id="GNk-U2-8rp"/>
+                            <constraint firstItem="sOL-hN-VFQ" firstAttribute="top" secondItem="Vez-5f-Ldw" secondAttribute="bottom" constant="8" id="La4-fU-6HG"/>
+                            <constraint firstItem="sOL-hN-VFQ" firstAttribute="centerX" secondItem="syI-Lx-LpU" secondAttribute="centerX" id="fN0-9e-bWY"/>
+                            <constraint firstItem="0t5-45-ahR" firstAttribute="top" secondItem="r14-IK-eCz" secondAttribute="bottom" constant="59" id="hGY-ox-42W"/>
+                            <constraint firstItem="MS3-Ln-LVh" firstAttribute="centerX" secondItem="syI-Lx-LpU" secondAttribute="centerX" id="nx6-wW-Ax4"/>
+                            <constraint firstItem="0t5-45-ahR" firstAttribute="centerX" secondItem="syI-Lx-LpU" secondAttribute="centerX" id="vNo-wm-MDv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calledNumber" destination="MS3-Ln-LVh" id="qYo-le-4Pl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn2-Cf-Dop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
